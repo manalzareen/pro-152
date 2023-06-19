@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src ="base.js"></script>
+    <script src ="car.js"></script>
+</head>
+<a-assets timeout="10000">
+
+    <a-asset-item id="ac_-_mclaren_p1" src="./ac_-_mclaren_p1/scene.gltf">
+    </a-asset-item>
+
+
+
+  <img id="bg" src="./images/bg.avif">
+
+ </a-assets>
+
+<body>
+
+    <a-scene background="color:white">
+        <a-camera position="0 0 5"> </a-camera>
+       <a-entity id="base" base >
+        <a-cylinder></a-cylinder>
+       </a-entity> 
+       <a-entity car>
+       <a-entity 
+       position="1 0.1 -2" 
+       rotation="1 70 -4" 
+       scale="0.2 0.2 0.2" 
+       gltf-model="#ac_-_mclaren_p1">
+
+       </a-entity>
+       </a-entity> 
+     
+        
+    </a-scene>
+</body>
+
+</html>
